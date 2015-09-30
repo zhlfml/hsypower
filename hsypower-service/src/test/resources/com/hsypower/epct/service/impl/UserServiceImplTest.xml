@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<User id="1" createdBy="admin" createOn="2013-06-29 13:58:38" name="admin" password="password" activity="1" />
+	<User id="2" createdBy="admin" createOn="2013-06-29 13:58:38" name="test" password="test" activity="1" />
+</dataset>

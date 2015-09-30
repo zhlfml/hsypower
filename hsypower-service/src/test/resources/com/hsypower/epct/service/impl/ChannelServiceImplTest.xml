@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<Channel id="1" createdBy="admin" createOn="2013-06-29 13:58:38" name="公司简介" path="/introduce" 
+		display="1" navigate="1" leftSide="1" bottom="1" sort="3" />
+</dataset>

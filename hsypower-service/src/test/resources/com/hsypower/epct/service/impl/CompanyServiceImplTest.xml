@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<Company id="1" address="江苏南京溧水" createdBy="admin" createOn="2013-06-29 13:58:38" description="电力公司" 
+			email="a@b.cn" introduce="百年企业，视质量为生命。" keywords="江苏、电力" name="南京华世远电力技术有限公司" saleTel="025-57345632" 
+			tax="025-57345622" techServiceTel="025-57349622" telephone="025-57345621" website="www.hsypower-epct.com" 
+			zipcode="211200" customerService="产品质量与售后服务承诺" salesNetwork="全国各地" perfermance="公司近期部分中标项目" />
+</dataset>

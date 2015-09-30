@@ -1,0 +1,173 @@
+@charset "utf-8";
+* { word-wrap: break-word; word-break: break-all; }
+body, th, td, input, select, textarea, button { font: 14px/1.5em Verdana, "宋体", Arial, Helvetica, sans-serif; }
+ul,ol,ul li,ol li,dl,dt,dd,em{margin:0px; padding:0px; list-style:none;}
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dt, dd, form, fieldset { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 1em; }
+ul li { list-style: none; }
+select { margin-right: 2px; }
+em{font-style:normal;}
+a { color: #333; text-decoration: none; }
+a:hover {color: red; text-decoration: underline; }
+a img { border: none; }
+.blocklink a { padding-left: 0.5em; line-height: 2em; display: block; }
+.blocklink a:hover { background: #2C629E; color: #FFF; text-decoration: none; }
+.blocklink .active a { color: #333; font-weight: bold; }
+.blueLink{color:#1e3c98;}
+.blueLink:hover{color:#f00;}
+.redLink{color:#F30; font-weight:bold;}
+caption, th { text-align: left; }
+caption { font-size: 14px; font-weight: bold; }
+caption p { font-weight: normal; }
+.gray { color: #999; font-size:12px; font-weight:normal; }
+.gray a { color: #999; }
+.green{color: green;}
+.green a{ color: green; }
+.floatleft{ float: left; }
+.floatright{ float: right; }
+.clear, .s_clear { clear: both; }
+.s_clear:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.s_clear { display: inline-block; }
+
+/*头部及导航部分栏目*/
+#top{width:100%; background:url(http://game.10086.cn/www/public/theme/default3/images/default3_20.gif) repeat-x center 70px; height:auto;}
+#topMain{width:980px; margin:0px auto; height:auto;}
+#topMainNav{background:url(http://game.10086.cn/www/public/theme/default3/images/default3_04.gif) repeat-x center 20px; line-height:30px; padding-bottom:5px; clear:both; position:relative; height:30px;}
+#topMainNavL{float:left; height:auto;}
+#topMainNavL a{color:#5b930c;}
+#topMainNavL a:hover{color:#f30;}
+#topMainNavR{float:right; color:#b9b9b9; position:relative; height:30px;}
+#topMainNavR a{color:#595959; padding:0em 0.5em; cursor:pointer;}
+#topMainNavR a:hover{color:#F00;}
+#topMainNavR .blueLink{color:#1e3c98;}
+#topMainNavR .blueLink:hover{color:#f30;}
+#topMainNavR .gwc{background:url(http://game.10086.cn/www/public/theme/default3/images/default3_03.gif) no-repeat left center; padding-left:20px;}
+#topMainNavR a.comOper{padding-right:10px; background:url(http://game.10086.cn/www/public/theme/default3/images/default3_05.gif) no-repeat right center;}
+#topMainNavR  ul{position:absolute; top:25px; right:5px; border:1px solid #CCCCCC; width:80px; height:174px; background:#FFF; z-index:10; display:none;}
+#topMainNavR  ul li{height:24px; line-height:24px; border-bottom:1px dashed #CCCCCC;}
+#topMainNavR  ul li a{width:68px; display:block; height:24px; line-height:24px;}
+#topMainNavR  ul li a:hover{background:#f7fcdd;}
+#topCon{height:80px; clear:both; width:100%;}
+#Logo{float:left; background:url(http://game.10086.cn/www/public/theme/default3/images/logo.jpg) no-repeat left center; width:320px; height:80px;}
+#Logo .chinaMobile{display:block; height:70px; width:140px; float:left;}
+#Logo .chinaMobileGame{display:block; height:70px; width:155px; float:left;}
+#topSearch{float:left; width:471px; height:62px; background:url(../images/default3_12.gif) no-repeat left 23px; display:inline; margin-top:5px;}
+#topSearchT{height:25px; width:100%;}
+#topSearchT input{display:none;}
+#topSearchT span{float:left; width:56px; text-align:center; line-height:24px; cursor:pointer; color:#3e6900;}
+#topSearchT span.mouseOn{background:url(http://game.10086.cn/www/public/theme/default3/images/default3_07.gif) no-repeat; color:#000;}
+#topSearchCon{margin-top:-1px; height:38px; width:100%; padding-top:3px; padding-left:6px;}
+#topSearchCon input{border:0px;}
+#topSearchCon input.txtInput{width:330px; height:20px; padding:6px 0px 0px; margin:2px 0px 0px; float:left; display:inline;}
+#topSearchCon input.btn{width:128px; height:30px; background:none; border:0px; cursor:pointer;}
+#hotSearch{width:177px; float:right; margin-top:25px; display:inline;}
+#hotSearch a{padding-left:3px;}
+#Nav{ clear:both; width:100%; height:83px; position:relative;}
+#NavTop{background:url(http://game.10086.cn/www/public/theme/default3/images/Nav_05.gif) repeat-x center 3px; float:left;}
+#NavTopL{background:url(http://game.10086.cn/www/public/theme/default3/images/Nav_03.gif) no-repeat left 3px; padding-left:10px; float:left;}
+#NavTopR{background:url(http://game.10086.cn/www/public/theme/default3/images/Nav_07.gif) no-repeat right 3px; padding-right:10px; height:auto; width:auto; overflow:hidden; float:left;}
+#NavTop a{display:block; float:left; padding:0px 15px; height:34px; line-height:34px; font-weight:bold; color:#3e6900; font-size:13px;}
+#NavTop a:hover{color:#F00;}
+#NavTop em{float:left; padding:0px 5px; line-height:34px; color:#999;}
+.navBg{background:url(http://game.10086.cn/www/public/theme/default3/images/default3_17.gif) no-repeat left; padding-left:15px; float:left; line-height:34px; display:none; _width:106px;}
+.gadd{_width:114px;}
+.index{_width:75px;}
+.navBgR{background:url(http://game.10086.cn/www/public/theme/default3/images/default3_17.gif) no-repeat right; color:#FFF; font-size:14px; font-weight:bold; padding-right:15px; cursor:pointer;}
+#NavTopR .navBg .navBgR a{background:none; color:#FFF; font-size:14px; float:none;}
+
+#NavCon{height:40px; width:100%; clear:both;}
+.NavCon{line-height:30px; float:left; padding-top:3px; color:#5b930b; display:none;}
+.NavCon em{color:#f00;}
+.NavCon strong{padding-left:10px;}
+.NavCon a{color:#5b930b; padding:0px 10px;}
+.NavCon a:hover{color:#F30;}
+#userInfo{float:right; background:url(http://game.10086.cn/www/public/theme/default3/images/default3_23.gif) no-repeat left center; padding-left:35px; color:#a0410a; margin-top:6px; display:inline;}
+.suqare{background:url(http://game.10086.cn/www/public/theme/default3/images/default3_24.gif) no-repeat; width:50px; height:23px; text-align:center; line-height:23px; color:#FFF; border:0px;}
+
+#NavTop .NavNone{display:none;}
+.navBgShow{display:inline;}
+
+#selectList{position:absolute; z-index:20; right:50px; bottom:60px;}
+
+/*头部及导航部分栏目*/
+
+/*底部CopyRight信息页脚*/
+#foot{width:980px; background:url(http://game.10086.cn/www/public/theme/default3/images/index_13.png) repeat-x center top; height:auto; overflow:hidden; margin:0px auto;}
+.foot_l{background:url(http://game.10086.cn/www/public/theme/default3/images/index_12.png) no-repeat left top; margin:0px;}
+.foot_r{background:url(http://game.10086.cn/www/public/theme/default3/images/index_16.png) no-repeat right top; padding-top:20px; height:auto; overflow:hidden; padding-bottom:15px;}
+.foot_r img{margin: 0px 20px 0px 200px; float:left;}
+.foot_r h4{margin:0px 00px 0px 0px; font-size:12px; font-weight:normal; color:#428900; padding-top:20px; text-align:center;}
+.foot_r h4 a{color:#428900; text-decoration:none;}
+.foot_r h5{color:#696969; font-size:12px; font-weight:normal; margin:0px; height:30px; line-height:30px; text-align:center;}
+.foot_r h5 a{color:#0d4095; font-size:13px; font-weight:bold; text-decoration:none;}
+.foot_r h5 em{color:#428900; font-style:normal;}
+
+
+#topMain{width:100%;}
+#topMainNav{background:none;padding-top: 4px;}
+#topMainNav{background:none;padding-top: 4px;}
+#top{background:url(../images/default3_04.gif) repeat-x center -4px;}
+#topMainNavL{float:right;margin-right:20px;}
+#Logo {background:url(../images/logo_zn2.gif) no-repeat scroll left center transparent;float: left;height: 62px;width: 342px; position:relative; margin-top:-26px;}
+#Logo .chinaMobile {display: block;height:62px;width: 120px; text-indent:-9999px;}
+#Logo .chinaMobileGame {display: block;height:62px;width: 155px;text-indent:-9999px;}
+#Nav_T{background:none;font-size:14px;height:30px;overflow:hidden;padding-top:6px;}
+#Nav_T li{margin-left:4px;height:30px;width:76px;overflow:hidden;float:left;line-height:30px;}
+#Nav_T .nav div,#Nav_T .nav a{background:url(../images/all_btn.gif);height:30px;line-height:30px;width:76px;overflow:hidden;float:left;text-align:center;color:#fff;}
+#Nav_T a{background:url(../images/all_btn2.gif);display:block;height:30px;line-height:30px;width:76px;overflow:hidden;text-align:center;float:left;color:#333;}
+#Nav{height:30px;line-height:30px;background:#67af2c;}
+#topMain{width:100%;}
+#topMainNav,#topCon,.navs_b{width:980px;margin:0 auto;}
+.navs_b{height:20px;display:block;position:relative;}
+#Nav_B a,#Nav_B span,#Nav_c span,#Nav_c a{display:block;float:left; }
+#Nav_B span,#Nav_c span{background:url(../images/nav_b2.gif) no-repeat center;width:4px; height:20px; padding:0 2px;padding-top:10px;}
+#Nav_c a{ padding:0 4px;}
+.navs_c{background:url(../images/nav_c.gif) repeat-x;height:38px;border-bottom:1px solid #dfdfdf;margin-bottom:10px;}
+.navs_c .cs{width:980px;margin:0 auto; padding-top:4px;}
+#mobileModelSet{height:30px;line-height:30px;width:210px;border:1px solid #d0e2c2;background:#f3f3f3;color:#2a5903;font-weight:700; padding-left:10px; margin-right:8px;float:left; position:relative; height:30px; overflow:hidden;}  
+#mobileModelSet p{height:30px;overflow:hidden;width: 178px;word-wrap:break-word;word-break:break-all;}
+#mobileModelSet a{color:#2a5903;text-decoration:underline; margin-left:30px;}
+#mobileModelSet a.cs {color: #2A5903;display: block;height: 24px;line-height: 24px;margin: 0;position: absolute;right: 0;text-decoration: underline;top: 0;width: 30px;}
+#mobileModelSet .red{color:#f00;}
+#tSearch{width:400px; float:left;}
+#keyword{width:302px; padding-left:12px;height:25px; line-height:25px;border:1px solid #67af2c; border-right:0; background:#fff; float:left;}
+#tSearch .btn{ background:url(../images/btns.gif); width:81px; height:29px; line-height:29px; border:0;float:left;font-size:14px;color:#fff; cursor:pointer;}
+#hotSearch{color: #2A5903;float: left;height: 30px;line-height: 30px;margin-left:8px;width: 320px; margin-top:0; display:block; overflow:hidden;}
+#hotSearch a{color: #2A5903;}
+.l1_l {float: left;margin-right: 10px;width: 222px;}
+#btnLRL a{ background:url(../images/btnLRL.gif); height:32px; width:117px; line-height:32px; text-align:center; display:block;color:#2a5903;font-weight:700;}
+#btnLRR a{ background:url(../images/btnLRr.gif);height:32px; width:86px; line-height:32px; text-align:center;display:block;color:#542400; font-weight:700;}
+#tabsecond div.tabSConShow p{ height:18px;line-height:18px;overflow:hidden;}
+#topMainNav,#topCon,.navs_b{width:980px;margin:0 auto;}
+#top{background:none; z-index:10;}
+#Nav{height:30px !important;line-height:30px;background:#67af2c;}
+#Nav_T{background:url(../images/gc/gc_04.gif) repeat-x; height:auto; overflow:hidden;}
+#Nav_L{background:url(../images/gc/gc_03.gif) no-repeat left; width:100%;}
+#Nav_R{background:url(../images/gc/gc_11.gif) no-repeat right; width:100%; height:45px;}
+#Nav_R ul{width:760px; float:left;}
+#Nav_R ul li{width:105px; background:url(../images/gc/gc_06.jpg) no-repeat right; float:left; height:45px; text-align:center; font-size:14px; line-height:45px;}
+#Nav_R ul li a{color:#FFF;}
+#Nav_R ul li a:hover{color:#F30;}
+#Nav_R ul li.nav div{background:url(../images/gc/gc_09.gif) no-repeat right; color:#477800; font-weight:bold; float:none; width:90px; padding:0px; text-indent:10px;}
+#topCon{height:30px;}
+#Nav_B{border: 0 none !important;height: auto !important;line-height: 25px !important;overflow: hidden !important;width: 978px !important;}
+#Nav_B h4{float:left;width:70px !important;; height:32px;font-size:14px !important;color:#fff !important; background:none; margin-right:4px;}
+#Nav_B a{color:#fff;}
+#Nav_B_Itype{float:left;width:142px;border-right:1px dashed #c8c8c8;padding:0px 10px;}
+#Nav_B_Itype img{float:left; margin:0px 10px;}
+#Nav_B_Itype a{color:#ff5d04;}
+#Nav_B_Ibrand{float:left; width:480px;height:30px; line-height:30px;}
+
+#Nav_B_Gtype{border: 0 none !important;float: left;height: 30px;line-height: 30px;padding: 0 !important;width: 440px !important;}
+#Nav_B_Gfrim{float:left; width:272px; padding:10px;}
+#Nav_B_Ibrand a,#Nav_B_Gtype a,#Nav_B_Gfrim a{margin:0px 2px;}
+
+#quickMenu{position:absolute;z-index:10; width:120px;height:20px; right:0px; top:2px;}
+#quickMenu span{width:66px; height:25px; line-height:25px; padding-right:20px; background:url(../images/xiala_03.gif) no-repeat; display:block; text-align:center;}
+#quickMenu ul{width:84px; border:1px solid #CCC; background:#FFF; display:none;}
+#quickMenu ul li{height:28px; line-height:28px; border-bottom:1px dashed #CCC; width:76px; text-align:center; clear:both;}
+#Nav_T{background: none repeat scroll 0 0 transparent !important;font-size: 14px;height: 30px !important;overflow: hidden;padding-top: 6px;}
+.ListMore{color:#F30; padding-left:5px;}
+.yxzx #Nav_B_Ibrand {border-right: 0 none !important;padding: 0;width: 400px;}
+#Nav_c{text-align:center;padding-left: 180px;}
+#Nav_c a{ color:#fff;}

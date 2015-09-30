@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<QualificationFileCategory id="1" createdBy="admin" createOn="2013-06-29 13:58:38" name="公司基本资料" filePath="qualificationFile/gsjbzl.jepg" />
+	<QualificationFileCategory id="2" createdBy="admin" createOn="2013-06-29 13:58:38" name="公司设计、安装资质" filePath="qualificationFile/gssjazzz.jepg" />
+	<QualificationFileCategory id="3" createdBy="admin" createOn="2013-06-29 13:58:38" name="公司产品资质" filePath="qualificationFile/gscpzz.jepg" />
+	
+	<QualificationFile id="1" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="1" />
+	<QualificationFile id="2" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="1" />
+	<QualificationFile id="3" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="1" />
+	<QualificationFile id="4" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="1" />
+	<QualificationFile id="5" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="2" />
+	
+	<QualificationFile id="6" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="2" />
+	<QualificationFile id="7" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="2" />
+	<QualificationFile id="8" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="2" />
+	<QualificationFile id="9" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="2" />
+	<QualificationFile id="10" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="3" />
+	
+	<QualificationFile id="11" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="3" />
+	<QualificationFile id="12" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="3" />
+	<QualificationFile id="13" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="3" />
+	<QualificationFile id="14" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="3" />
+	<QualificationFile id="15" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人资料" filePath="qualificationFile/qyfzzl.jepg" qualificationFileCategoryId="3" />
+</dataset>

@@ -1,0 +1,23 @@
+body{background:#fff; font-size:12px;}
+.backgro{width:960px; height:auto; overflow:hidden;position:relative;}
+.adv_pcimg{margin:1px 0px 0px 2px;width:231px;height:243px;display:block; position:relative; overflow:hidden}
+.adv_pcimg img{display:block}
+.adv_pcimg .bnt_pcgmenter{position:absolute;right:5px;bottom:5px}
+
+.le {width:960px;padding-top:5px;margin-bottom:15px; overflow:hidden; margin:0 auto;}
+.left {width:690px;float:left;margin-left:1px;}
+.part1 {margin-bottom:10px;height:200px;overflow:hidden;}
+.part1 dt {background:url(../images/coms.jpg) no-repeat;height:33px;}
+.part1 dt span {float:right;margin:10px 10px 0px 0px}
+.part1 dt a,.part2 dt a {color:#000;}
+.part1 dt a:hover,.part2 dt a:hover {color:#FF0000; text-decoration:underline}
+.part1 dd {padding-left:5px;color:#4c4948;line-height:20px;height: 160px;}
+.part2 dt {background:url(../images/pos.jpg) no-repeat;height:33px;}
+.part2 dd div {margin:10px 0;width:480;overflow:hidden;}
+.part2 img {border: 1px solid #CCCCCC;margin-right:5px;}
+.part2 dt span {float:right;margin:10px 5px 0px 0px}
+.part2 a,.right1 a,.part3 a {color:#4c4948;}
+.part2 a:hover,.right1 a:hover,.part3 a:hover {color:#FF0000; text-decoration:underline}
+.right {width:252px;float:right}
+.part3 dd {color:#4c4948;line-height:25px;padding-bottom:10px}
+.part3 dt {background:url(../images/lxw.jpg) no-repeat;height:33px;}

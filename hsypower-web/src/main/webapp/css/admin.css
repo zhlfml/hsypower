@@ -1,0 +1,77 @@
+body {
+    color: #364F56;
+    font-size: 12px;
+}
+
+body.tbody {
+    background-color: #bce193;
+    margin-right: 6px;
+}
+
+body.lbody {
+    background: url("../images/theme/lbg.jpg") repeat-y scroll right center #F6FAFB;
+    color: #666666;
+    margin-right: 6px;
+}
+
+ul {padding: 0}
+ul li {padding: 2px 0}
+
+a {text-decoration:none;}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+input[type=text],input[type=password] {width: 350px;}
+
+input[type=submit],input[type=reset],input[type=button] {width: 120px;}
+
+textarea {width:850px;height:500px;}
+textarea.meta {width:850px;height:150px;}
+
+tr {text-align: left;}
+tr.hidden {display:none;}
+
+.pn-ltable {
+    background-color: #C8DCF0;
+    margin: 5px auto 0;
+}
+
+.pn-ltable tr {
+	text-align: center;
+}
+
+.pn-lthead {
+
+}
+
+.pn-lthead th {
+    background-image: url("../images/theme/tit-tdbg.png");
+    color: #3566A9;
+    height: 29px;
+}
+
+.pn-ltbody {
+    background-color: #FFFFFF;
+}
+
+.pn-ftable {
+    background-color: #B4CFCF;
+    margin-top: 5px;
+}
+
+.pn-flabel-h {
+    height: 27px;
+}
+.pn-flabel {
+    background-color: #E6F2FE;
+    color: #000000;
+    padding-right: 3px;
+    text-align: right;
+}
+.pn-fcontent {
+    background-color: #FFFFFF;
+    padding-left: 5px;
+}

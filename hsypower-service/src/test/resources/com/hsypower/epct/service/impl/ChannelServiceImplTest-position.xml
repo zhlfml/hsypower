@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<Channel id="1" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="首页" path="/index" display="1" navigate="1" leftSide="0" bottom="0" sort="1" />
+	<Channel id="2" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="热销商品" path="/product" display="1" navigate="1" leftSide="0" bottom="0" sort="2" />
+	<Channel id="3" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="资质文件" path="/qualification" display="1" navigate="1" leftSide="0" bottom="1" sort="4" />
+	<Channel id="4" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="主要业绩" path="/perfermance" display="1" navigate="1" leftSide="1" bottom="0" sort="5" />
+	<Channel id="5" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="公司简介" path="/introduce" display="1" navigate="1" leftSide="1" bottom="1" sort="3" />
+	<Channel id="6" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="新闻快讯" path="/news" display="1" navigate="1" leftSide="1" bottom="0" sort="6" />
+	<Channel id="7" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="客户服务" path="/service" display="1" navigate="1" leftSide="1" bottom="1" sort="7" />
+	<Channel id="8" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="联系我们" path="/contact" display="1" navigate="1" leftSide="1" bottom="1" sort="9" />
+	<Channel id="9" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="销售网络" path="/sales" display="1" navigate="0" leftSide="1" bottom="1" sort="8" />
+	<Channel id="10" createdBy="admin" createOn="2013-06-29 13:58:38" modifiedBy="admin" modifyOn="2013-06-29 13:58:38"
+			name="测试用途" path="/test" display="0" navigate="1" leftSide="1" bottom="1" sort="10" />
+</dataset>

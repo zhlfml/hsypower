@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<QualificationFileCategory id="1" createdBy="admin" createOn="2013-06-29 13:58:38" name="公司基本资料" filePath="qualificationFile/gsjbzl.jepg" />
+	
+	<QualificationFile id="1" createdBy="admin" createOn="2013-06-29 13:58:38" name="企业法人营业执照" filePath="qualificationFile/qyfzyyzz.jepg" qualificationFileCategoryId="1" />
+	<QualificationFile id="2" createdBy="admin" createOn="2013-06-29 13:58:38" name="税务执照" filePath="qualificationFile/qyfzyyzz.jepg" qualificationFileCategoryId="1" />
+</dataset>

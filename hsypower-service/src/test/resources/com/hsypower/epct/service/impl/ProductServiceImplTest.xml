@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<ProductCategory id="1" createdBy="admin" createOn="2013-06-29 13:58:38" name="01.低压成套设备" />
+	<ProductCategory id="2" createdBy="admin" createOn="2013-06-29 13:58:38" name="02.高压成套设备" />
+	<ProductCategory id="3" createdBy="admin" createOn="2013-06-29 13:58:38" name="03.箱式变电站" />
+	<ProductCategory id="4" createdBy="admin" createOn="2013-06-29 13:58:38" name="04.高压断路器" />
+	<ProductCategory id="5" createdBy="admin" createOn="2013-06-29 13:58:38" name="01.微机保护装置" />
+	
+	<Product id="1" createdBy="admin" createOn="2013-06-29 13:58:38" name="GCK、GCL型低压抽出式成套开关设备" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="1" />
+	<Product id="2" createdBy="admin" createOn="2013-06-29 13:58:38" name="GCS型低压抽出式成套开关设备" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="1" />
+	<Product id="3" createdBy="admin" createOn="2013-06-29 13:58:38" name="MNS型低压抽出式成套开关设备" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="1" />
+	<Product id="4" createdBy="admin" createOn="2013-06-29 13:58:38" name="GBD型低压固定分隔式开关设备" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="1" />
+	<Product id="5" createdBy="admin" createOn="2013-06-29 13:58:38" name="GGD型低压固定式成套开关设备" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="1" />
+	<Product id="6" createdBy="admin" createOn="2013-06-29 13:58:38" name="SDVS-1型无功率补偿装置" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="1" />
+	<Product id="7" createdBy="admin" createOn="2013-06-29 13:58:38" name="SDXL动力配电箱" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="1" />
+	<Product id="8" createdBy="admin" createOn="2013-06-29 13:58:38" name="SODL低压电缆分支箱" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="1" />
+	<Product id="9" createdBy="admin" createOn="2013-06-29 13:58:38" name="SODL低压电缆分支箱" icon="upload/product/icon/xyz.jpg" introduce="&lt;img src='http://localhost:8080/hsypower/upload/product/introduce/abc.jpg' /&gt;" productCategoryId="2" />
+</dataset>
