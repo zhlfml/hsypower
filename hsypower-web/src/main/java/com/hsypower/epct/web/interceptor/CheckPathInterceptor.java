@@ -5,6 +5,11 @@ import java.util.Iterator;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.hsypower.epct.entity.User;
+import com.hsypower.epct.utils.Validator;
+import me.thomas.security.NoPermissionException;
+import me.thomas.security.def.PrincipalType;
+import me.thomas.security.service.IPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -16,6 +21,8 @@ public class CheckPathInterceptor extends HandlerInterceptorAdapter {
 
 	@Autowired
 	protected IChannelService channelService;
+	@Autowired
+	protected IPermissionService permissionService;
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request,
@@ -30,6 +37,17 @@ public class CheckPathInterceptor extends HandlerInterceptorAdapter {
 					throw new AccessDeniedException("Access denied :" + path);
 				}
 			}
+		}
+
+		String userId = "guest";
+		User user = (User) request.getSession().getAttribute("user");
+		if (Validator.isNotNull(user)) {
+			userId = String.valueOf(user.getId());
+		}
+
+		boolean hasPermission = permissionService.hasPermission(PrincipalType.USER, userId, path.substring(1, path.indexOf('/', 1)), "VIEW");
+		if (!hasPermission) {
+			throw new NoPermissionException("No permission to access :" + path);
 		}
 
 		return super.preHandle(request, response, handler);

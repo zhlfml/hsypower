@@ -33,6 +33,16 @@
     	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
+	<bean id="securityServiceConfiguration" class="me.thomas.security.SecurityServiceConfiguration">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<bean id="securityServices" class="me.thomas.security.SecurityServicesFactoryBean">
+		<property name="securityServiceConfiguration" ref="securityServiceConfiguration"/>
+	</bean>
+
+    <bean id="permissionService" factory-bean="securityServices" factory-method="getPermissionService"/>
+
     <!-- Jpa Entity Manager 配置 -->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
