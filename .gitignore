@@ -1,8 +1,12 @@
 *~
 .*
 *.iml
+rebel.xml
+deploy.sh
 
 target/
+upload/
+static/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup

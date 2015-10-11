@@ -6,6 +6,7 @@
 	<%@ include file="../common/header.jsp"%>
 	<script src="${ctx }/widget/kindeditor/kindeditor-min.js" type="text/javascript"></script>
    	<script src="${ctx }/widget/kindeditor/lang/zh_CN.js" type="text/javascript"></script>
+	<script src="${ctx }/js/fileupload-xhr.js" type="text/javascript"></script>
    	<script type="text/javascript">
    	$(document).ready(function() {
    		var options = {
@@ -13,9 +14,17 @@
    			uploadJson : '${ctx }/fileupload'
    		};
    		var editor_introduce = KindEditor.create('#editor_introduce', options);
-   		
+
+		var $preview = $("#preview");
    		$("#file").change(function(){
-   			previewImg(this, '#preview');
+            var $file = $(this);
+            var files = $file[0].files;
+            [].forEach.call(files, function(file) {
+                uploadFile("${ctx }/fileupload", file, function(json) {
+                    console.debug(this);
+					$preview.attr("src", json.url);
+				});
+            })
    		});
    	});
     </script>
@@ -27,6 +36,8 @@
 	    <form:hidden path="id" />
 	    <form:hidden path="icon" />
 		<form:errors path="*" cssStyle="color:red"></form:errors><br/>
+        <div id="target"></div>
+        <progress id="progress" class="form-control" value="0" max="100"></progress>
 		<table class="pn-ftable" width="100%" cellspacing="1" cellpadding="2" border="0">
 			<tbody>
 				<tr>
