@@ -3,6 +3,7 @@ package com.hsypower.epct.web.controller.back;
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,13 +31,9 @@ public class QualificationFileCategoryController extends BackController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String doAdd(QualificationFileCategory qualificationFileCategory,
+	public String doAdd(@Valid QualificationFileCategory qualificationFileCategory,
 			BindingResult result, HttpServletRequest request)
 			throws IllegalStateException, IOException {
-		if (Validator.isNull(qualificationFileCategory.getName())) {
-			result.rejectValue("name",
-					"error.qualificationFileCategory.name.null", "资质文件类名不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/qualificationFileCategory/edit";
 		}
@@ -73,13 +70,9 @@ public class QualificationFileCategoryController extends BackController {
 	}
 
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public String doModify(QualificationFileCategory qualificationFileCategory,
+	public String doModify(@Valid QualificationFileCategory qualificationFileCategory,
 			BindingResult result, HttpServletRequest request)
 			throws IllegalStateException, IOException {
-		if (Validator.isNull(qualificationFileCategory.getName())) {
-			result.rejectValue("name",
-					"error.qualificationFileCategory.name.null", "资质文件类名不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/qualificationFileCategory/edit";
 		}

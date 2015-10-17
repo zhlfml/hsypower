@@ -3,6 +3,7 @@ package com.hsypower.epct.web.controller.back;
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,12 +39,9 @@ public class ProductController extends BackController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String doAdd(Product product, BindingResult result,
+	public String doAdd(@Valid Product product, BindingResult result,
 			HttpServletRequest request) throws IllegalStateException,
 			IOException {
-		if (Validator.isNull(product.getName())) {
-			result.rejectValue("name", "error.product.name.null", "产品名称不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/product/edit";
 		}
@@ -73,12 +71,9 @@ public class ProductController extends BackController {
 	}
 
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public String doModify(Product product, BindingResult result,
+	public String doModify(@Valid Product product, BindingResult result,
 			HttpServletRequest request) throws IllegalStateException,
 			IOException {
-		if (Validator.isNull(product.getName())) {
-			result.rejectValue("name", "error.product.name.null", "产品名称不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/product/edit";
 		}

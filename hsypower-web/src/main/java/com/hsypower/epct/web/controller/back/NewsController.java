@@ -1,7 +1,10 @@
 package com.hsypower.epct.web.controller.back;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -30,14 +33,8 @@ public class NewsController extends BackController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String doAdd(News news, BindingResult result,
+	public String doAdd(@Valid News news, BindingResult result,
 			HttpServletRequest request) {
-		if (Validator.isNull(news.getName())) {
-			result.rejectValue("name", "error.news.name.null", "标题不能为空");
-		}
-		if (Validator.isNull(news.getContent())) {
-			result.rejectValue("name", "error.news.content.null", "内容不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/news/edit";
 		}
@@ -78,7 +75,7 @@ public class NewsController extends BackController {
 	}
 
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public String doModify(News news, BindingResult result,
+	public String doModify(@Valid News news, BindingResult result,
 			HttpServletRequest request) {
 		if (Validator.isNull(news.getName())) {
 			result.rejectValue("name", "error.news.name.null", "标题不能为空");

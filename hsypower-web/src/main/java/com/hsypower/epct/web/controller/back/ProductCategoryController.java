@@ -1,6 +1,7 @@
 package com.hsypower.epct.web.controller.back;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,12 +29,8 @@ public class ProductCategoryController extends BackController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String doAdd(ProductCategory productCategory, BindingResult result,
+	public String doAdd(@Valid ProductCategory productCategory, BindingResult result,
 			HttpServletRequest request) {
-		if (Validator.isNull(productCategory.getName())) {
-			result.rejectValue("name", "error.productCategory.name.null",
-					"产品类型名称不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/productCategory/edit";
 		}
@@ -63,12 +60,8 @@ public class ProductCategoryController extends BackController {
 	}
 
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public String doModify(ProductCategory productCategory,
+	public String doModify(@Valid ProductCategory productCategory,
 			BindingResult result, HttpServletRequest request) {
-		if (Validator.isNull(productCategory.getName())) {
-			result.rejectValue("name", "error.productCategory.name.null",
-					"产品类型名称不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/productCategory/edit";
 		}

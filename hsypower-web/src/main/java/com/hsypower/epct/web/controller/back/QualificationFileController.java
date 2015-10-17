@@ -3,6 +3,7 @@ package com.hsypower.epct.web.controller.back;
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,13 +39,9 @@ public class QualificationFileController extends BackController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String doAdd(QualificationFile qualificationFile,
+	public String doAdd(@Valid QualificationFile qualificationFile,
 			BindingResult result, HttpServletRequest request)
 			throws IllegalStateException, IOException {
-		if (Validator.isNull(qualificationFile.getName())) {
-			result.rejectValue("name", "error.qualificationFile.name.null",
-					"产品名称不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/qualificationFile/edit";
 		}
@@ -78,13 +75,9 @@ public class QualificationFileController extends BackController {
 	}
 
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public String doModify(QualificationFile qualificationFile,
+	public String doModify(@Valid QualificationFile qualificationFile,
 			BindingResult result, HttpServletRequest request)
 			throws IllegalStateException, IOException {
-		if (Validator.isNull(qualificationFile.getName())) {
-			result.rejectValue("name", "error.qualificationFile.name.null",
-					"产品名称不能为空");
-		}
 		if (result.hasErrors()) {
 			return "admin/qualificationFile/edit";
 		}

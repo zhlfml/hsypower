@@ -7,12 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @MappedSuperclass
 public class BaseEntity {
 	
 	protected long id;
+	@NotEmpty(message = "{error.base.name.not.empty}")
 	protected String name;
 	protected Date createOn;
 	protected String createdBy;
@@ -23,7 +25,8 @@ public class BaseEntity {
 	 * @return the id
 	 */
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+    // GenerationType.IDENTITY: 主键由数据库自动生成（主要是自动增长型）
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public long getId() {
 		return id;
 	}

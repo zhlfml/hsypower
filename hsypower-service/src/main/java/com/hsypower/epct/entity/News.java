@@ -12,6 +12,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import com.hsypower.epct.BaseEntity;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -19,7 +20,8 @@ public class News extends BaseEntity implements Serializable {
 
 	@Transient
 	private static final long serialVersionUID = 6222832557692489272L;
-	
+
+	@NotEmpty(message = "{error.news.content.not.empty}")
 	private String content;
 	private boolean publish;
 	
