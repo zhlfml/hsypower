@@ -1,7 +1,6 @@
 package com.hsypower.epct.web.listener;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -11,7 +10,7 @@ import javax.servlet.ServletContextListener;
 import com.hsypower.epct.utils.FileUtil;
 import com.hsypower.epct.utils.IpUtil;
 import com.hsypower.epct.utils.MailUtil;
-import com.hsypower.epct.utils.ProperyUtil;
+import com.hsypower.epct.utils.PropertyUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,9 +23,9 @@ public class IpMonitor implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 
-        int interval =  ProperyUtil.getInteger("mail.interval");
-        final String receiver = ProperyUtil.getString("mail.receiver");
-        final String content = ProperyUtil.getString("mail.content");
+        int interval =  PropertyUtil.getInteger("mail.interval");
+        final String receiver = PropertyUtil.getString("mail.receiver");
+        final String content = PropertyUtil.getString("mail.content");
         try {
             localIp = FileUtil.read(ipFile).trim();
         } catch (IOException e) {

@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.hsypower.epct.BaseEntity;
 import com.hsypower.epct.utils.Constants;
-import com.hsypower.epct.utils.ProperyUtil;
+import com.hsypower.epct.utils.PropertyUtil;
 import com.hsypower.epct.web.handler.ExceptionHandlers;
 
 public abstract class BaseController extends ExceptionHandlers implements
@@ -33,7 +33,7 @@ public abstract class BaseController extends ExceptionHandlers implements
 			throws IllegalStateException, IOException {
 		
 		if (file.getSize() > 0) {
-			String uploadDest = ProperyUtil
+			String uploadDest = PropertyUtil
 					.getString(Constants.UPLOAD_FILE_DESTINATION);
 			String savePath = servletContext.getRealPath("/") + uploadDest;
 			String fileExt = file.getOriginalFilename()
