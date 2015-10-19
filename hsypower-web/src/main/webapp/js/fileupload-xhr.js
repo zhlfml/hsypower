@@ -20,15 +20,17 @@ var uploadFile = function(url, file, callback) {
     xhr.addEventListener("readystatechange", function() {
         if (xhr.readyState == 4) {
             if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
-                var responseJson = JSON.parse(xhr.responseText);
-                if (callback && typeof callback === "function") {
-                    callback.call(null, responseJson);
-                }
+				if (xhr.responseText) {
+					var responseJson = JSON.parse(xhr.responseText);
+					if (callback && typeof callback === "function") {
+						callback.call(null, responseJson);
+					}
+				}
             }
         }
     })
 
     xhr.open("POST", url, true);
-    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); // seems not necessary
+    //xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); // seems not necessary, cause error under php server
     xhr.send(formData);
 };
