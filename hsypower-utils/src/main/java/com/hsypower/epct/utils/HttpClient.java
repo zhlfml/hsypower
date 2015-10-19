@@ -29,18 +29,38 @@ import java.util.Map;
  */
 public class HttpClient {
 
+
+    /**
+     * Get请求
+     *
+     * @param uri 资源路径
+     * @return 响应内容
+     */
+    public static String get(String uri) {
+        return execute(new HttpGet(uri));
+    }
+
+    /**
+     * Get请求
+     *
+     * @param uri 资源路径
+     * @param params 请求参数
+     * @return 响应内容
+     */
     public static String get(String uri, Map<String, String> params) {
-        boolean noMark = uri.indexOf('?') == -1;
+        boolean noQuestionMark = uri.indexOf('?') == -1;
         StringBuffer sb = new StringBuffer(uri);
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            if (StringUtils.isNotEmpty(entry.getValue())) {
-                sb.append("&")
-                        .append(entry.getKey())
-                        .append("=")
-                        .append(entry.getValue());
+        if (params != null) {
+            for (Map.Entry<String, String> entry : params.entrySet()) {
+                if (StringUtils.isNotEmpty(entry.getValue())) {
+                    sb.append("&")
+                            .append(entry.getKey())
+                            .append("=")
+                            .append(entry.getValue());
+                }
             }
         }
-        if (noMark) {
+        if (noQuestionMark) {
             int pos = uri.length();
             sb.replace(pos, pos + 1, "?");
         }
@@ -49,12 +69,21 @@ public class HttpClient {
         return execute(httpGet);
     }
 
+    /**
+     * Post请求
+     *
+     * @param uri 资源路径
+     * @param params 请求参数
+     * @return 响应内容
+     */
     public static String post(String uri, Map<String, String> params) {
         HttpPost httpPost = new HttpPost(uri);
         List<BasicNameValuePair> postData = new ArrayList<BasicNameValuePair>();
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            if (StringUtils.isNotEmpty(entry.getValue())) {
-                postData.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+        if (params != null) {
+            for (Map.Entry<String, String> entry : params.entrySet()) {
+                if (StringUtils.isNotEmpty(entry.getValue())) {
+                    postData.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+                }
             }
         }
         HttpEntity reqEntity = new UrlEncodedFormEntity(postData, Charset.defaultCharset());
@@ -64,7 +93,7 @@ public class HttpClient {
     }
 
     /**
-     *
+     * 通过文件上传，服务器端可获取文件名
      *
      * @param uri 上传路径
      * @param file 文件
@@ -82,7 +111,7 @@ public class HttpClient {
     }
 
     /**
-     * 通过文件流上传，服务器端获取不到文件名
+     * 通过二进制流上传，服务器端获取不到文件名
      *
      * @param uri 上传路径
      * @param inputStream 文件流
@@ -106,7 +135,7 @@ public class HttpClient {
                     HttpStatus.SC_NOT_MODIFIED == response.getStatusLine().getStatusCode()) {
                 HttpEntity resEntity = response.getEntity();
                 if (resEntity != null) {
-                    return EntityUtils.toString(resEntity);
+                    return EntityUtils.toString(resEntity, Charset.defaultCharset());
                 }
             }
         } catch (IOException e) {
@@ -118,6 +147,7 @@ public class HttpClient {
                 // ignore
             }
         }
+
         return null;
     }
 
@@ -134,8 +164,8 @@ public class HttpClient {
 //        responseText = HttpClient.get("http://localhost:8080/hsypower/admin/channel/modify?a=b", channelParams);
 
         File file = new File("C:\\Users\\Public\\Pictures\\Sample Pictures\\829BJDH633AN.jpg");
-        responseText = HttpClient.upload("http://localhost:8080/file/fileupload", FileUtils.openInputStream(file));
-//        responseText = HttpClient.upload("http://localhost:8080/file/fileupload", file);
+//        responseText = HttpClient.upload("http://localhost:8080/file/fileupload", FileUtils.openInputStream(file));
+        responseText = HttpClient.upload("http://localhost:8080/file/fileupload", file);
 
         System.out.println(responseText);
     }
